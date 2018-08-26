@@ -8,10 +8,11 @@ public class PointsAndTime : MonoBehaviour {
 
     public float roundTimeStart=60;
     public float timeBetweenRounds = 5;
-    public float points;
+    public static float points;
     public float roundTimeLeft;
     public Text timeText;
-    public Text pointsText;
+    public GameObject pointsTextObj;
+    
     public PlayerInput[] players;
     public TrashSpawner trashSpawner;
 
@@ -25,6 +26,7 @@ public class PointsAndTime : MonoBehaviour {
 	void Start () {
         //testing, remove
         StartGame();
+        
 	}
 
     
@@ -69,8 +71,10 @@ public class PointsAndTime : MonoBehaviour {
         //display score
         iTween.MoveTo(endCard, iTween.Hash("easetype", "easeoutcubic", "time", 2, "position", new Vector3(92, 5, 56)));
 
+        endCard.GetComponent<UI_EndCard>().Invoke("Activate", 0.6f);
+
         //wait for something to call start game
-        Debug.Log(points);
+        //endcard object restarts scene
 
     }
 
@@ -95,10 +99,17 @@ public class PointsAndTime : MonoBehaviour {
 
    
 
-    public void AddPoints(int _pointsToAdd)
+    public static void AddPoints(int _pointsToAdd)
     {
         Debug.Log(points);
         points += _pointsToAdd;
-        //pointsText.text = points.ToString();
+        
+        Camera.main.GetComponent<GameManagerFinder>().pointerUI.GetComponent<Text>().text = points.ToString();
+
+    }
+
+    public void AddPointsText()
+    {
+       
     }
 }

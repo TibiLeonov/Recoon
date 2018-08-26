@@ -17,7 +17,7 @@ public class Throwable : MonoBehaviour
     public Mesh mesh;
     public Material material;
 
-    public PointsAndTime pointsAndTimeTracker;
+    //public PointsAndTime pointsAndTimeTracker;
 
     public bool gettingDestroyed;
 
@@ -93,7 +93,7 @@ public class Throwable : MonoBehaviour
                     //particle
                     Debug.Log("yay");
                     //temporary delete animation
-                    pointsAndTimeTracker.AddPoints(pointsWorth);
+                    PointsAndTime.AddPoints(pointsWorth);
 
                     //show the icon
                     target.DisplayIcon(true);
@@ -102,7 +102,7 @@ public class Throwable : MonoBehaviour
                 else if (secondaryBin && secondaryBinType == target.binType)
                 {
                     //temporary delete animation
-                    pointsAndTimeTracker.AddPoints(secondaryPointsWorth);
+                    PointsAndTime.AddPoints(secondaryPointsWorth);
 
                     target.DisplayIcon(true);
                 }

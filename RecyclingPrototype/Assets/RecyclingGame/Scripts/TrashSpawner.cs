@@ -22,6 +22,8 @@ public class TrashSpawner : MonoBehaviour
 
     public bool spawning;
 
+    public int trashNumber;
+
 
     void Start()
     {
@@ -128,15 +130,16 @@ public class TrashSpawner : MonoBehaviour
     //spawns trash at location
     public void SpawnTrash(Vector3 location, ThrowablesScriptableObject trashType)
     {
-        if (Random.value > chanceForPileDrop)
+        if ( trashNumber<9 )
         {
             //not the drop
             Quaternion qua = Quaternion.Euler(Random.Range(-180f, 180f), Random.Range(-180f, 180f), Random.Range(-180f, 180f));
             GameObject spawnedTrash = Instantiate(throwablePrefab, location, qua);
             spawnedTrash.GetComponentInChildren<Throwable>().throwableData = trashType;
             spawnedTrash.GetComponentInChildren<Throwable>().LoadData();
+            trashNumber++;
         }
-        else
+        else if( trashNumber==9  )
         {
 
             foreach (Transform child in pileDrop.transform)
@@ -145,8 +148,28 @@ public class TrashSpawner : MonoBehaviour
                 GameObject spawnedTrash = Instantiate(throwablePrefab, location + child.transform.position, qua);
                 spawnedTrash.GetComponentInChildren<Throwable>().throwableData = NextRandomTrashType();
                 spawnedTrash.GetComponentInChildren<Throwable>().LoadData();
+                trashNumber++;
             }
 
+        }else if(Random.value > chanceForPileDrop)
+        {
+            //not the drop
+            Quaternion qua = Quaternion.Euler(Random.Range(-180f, 180f), Random.Range(-180f, 180f), Random.Range(-180f, 180f));
+            GameObject spawnedTrash = Instantiate(throwablePrefab, location, qua);
+            spawnedTrash.GetComponentInChildren<Throwable>().throwableData = trashType;
+            spawnedTrash.GetComponentInChildren<Throwable>().LoadData();
+            trashNumber++;
+        }
+        else
+        {
+            foreach (Transform child in pileDrop.transform)
+            {
+                Quaternion qua = Quaternion.Euler(Random.Range(-180f, 180f), Random.Range(-180f, 180f), Random.Range(-180f, 180f));
+                GameObject spawnedTrash = Instantiate(throwablePrefab, location + child.transform.position, qua);
+                spawnedTrash.GetComponentInChildren<Throwable>().throwableData = NextRandomTrashType();
+                spawnedTrash.GetComponentInChildren<Throwable>().LoadData();
+                trashNumber++;
+            }
         }
     }
 }
