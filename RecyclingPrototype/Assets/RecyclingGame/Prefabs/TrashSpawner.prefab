@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1502169404430584}
+  m_IsPrefabAsset: 1
+--- !u!1 &1502169404430584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4561522421444398}
+  - component: {fileID: 114743747023603900}
+  m_Layer: 0
+  m_Name: TrashSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4561522421444398
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1502169404430584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114743747023603900
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1502169404430584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9a37bbbdc561144acea73fb7c2475c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwablePrefab: {fileID: 1536501596811730, guid: 934f43121042e594983565499efeaec8,
+    type: 2}
+  trashDatas:
+  - {fileID: 11400000, guid: e23daff2f1922bb4d9844fa612b14f75, type: 2}
+  - {fileID: 11400000, guid: 0108ec79e23c6b14b9741c0a225ab2aa, type: 2}
+  - {fileID: 11400000, guid: c0353dcbcca698042ad9b47a7979b476, type: 2}
+  - {fileID: 11400000, guid: a43d07b9ddd98974ab6b8a3c65343eba, type: 2}
+  - {fileID: 11400000, guid: 6c02760e2eb69dc40b49d3847a460a03, type: 2}
+  - {fileID: 11400000, guid: 76f4a615fb955524b8918e9db27feaf1, type: 2}
+  - {fileID: 11400000, guid: 238933dc3a205694da9b6866af5b89c3, type: 2}
+  - {fileID: 11400000, guid: 5cae6ac5a43b96a41a0cf47a41a62b24, type: 2}
+  - {fileID: 11400000, guid: b59496cafe00ebd478b48372f04d402d, type: 2}
+  - {fileID: 11400000, guid: 4872f93d04540a545ad422a85146c9e1, type: 2}
+  - {fileID: 11400000, guid: ff9ba2140e30d1545a69561f1e8016d6, type: 2}
+  spawnAreaCorner1: {x: -10, y: 10, z: -10}
+  spawnAreaCorner2: {x: 10, y: 10, z: 10}
+  timeToSpawn: 5
+  lastTrash1: {fileID: 0}
+  lastTrash2: {fileID: 0}
+  chanceForPileDrop: 0.05
+  pileDrop: {fileID: 1594345912019296, guid: 3447224a09bee844393420d609f58c92, type: 2}

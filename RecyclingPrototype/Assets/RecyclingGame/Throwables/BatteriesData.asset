@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 315ff628f9c5a7e428f4c9f18f7d37c7, type: 3}
+  m_Name: BatteriesData
+  m_EditorClassIdentifier: 
+  name: Batteries
+  properBin: 2
+  disposeInstructions: Throw in e-wasate.
+  pointsWorth: 10
+  childCollider: {fileID: 1437702065740026, guid: 0ab9692b3b527cd4783a4b6ffc099b8e,
+    type: 2}
+  mesh: {fileID: 4300000, guid: 2c2a5bbaca623204eb67cd94475a1dfa, type: 3}
+  material: {fileID: 2100000, guid: cbb3eeaa942cddc48a605075762424da, type: 2}

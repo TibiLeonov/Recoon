@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 315ff628f9c5a7e428f4c9f18f7d37c7, type: 3}
+  m_Name: AppleCoreData
+  m_EditorClassIdentifier: 
+  name: Apple Core
+  properBin: 0
+  disposeInstructions: Throw in the Compost Bin.
+  pointsWorth: 10
+  childCollider: {fileID: 1488520065690162, guid: 81e9b236ae76784489680928762b0ccb,
+    type: 2}
+  mesh: {fileID: 4300000, guid: 7e562aae65da8f140b45fa2d18450b29, type: 3}
+  material: {fileID: 2100000, guid: 8168b1bc1a1df2b499997dab00c16cce, type: 2}
